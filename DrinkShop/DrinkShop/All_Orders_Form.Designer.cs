@@ -106,6 +106,7 @@
             // 
             // order_button
             // 
+            this.order_button.BorderRadius = 10;
             this.order_button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.order_button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.order_button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

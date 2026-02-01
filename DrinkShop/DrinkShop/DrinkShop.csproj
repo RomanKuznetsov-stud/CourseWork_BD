@@ -76,6 +76,7 @@
     <Compile Include="AppControllers\AccountController.cs" />
     <Compile Include="AppControllers\ShopController.cs" />
     <Compile Include="AppModel\AccountModel.cs" />
+    <Compile Include="AppModel\PasswordHasher.cs" />
     <Compile Include="AppModel\ShopModel.cs" />
     <Compile Include="ChangePriceForm.cs">
       <SubType>Form</SubType>

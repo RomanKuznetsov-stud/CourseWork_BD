@@ -26,7 +26,8 @@ namespace DrinkShop.AppModel
                 string query = "SELECT Role, Username FROM Users WHERE Email = @Email AND Password = @Password";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Password", password);
+                string hashedPassword = PasswordHasher.HashPassword(password);
+                command.Parameters.AddWithValue("@Password", hashedPassword);
 
                 try
                 {
@@ -57,7 +58,8 @@ namespace DrinkShop.AppModel
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Username", username);
-                command.Parameters.AddWithValue("@Password", password);
+                string hashedPassword = PasswordHasher.HashPassword(password);
+                command.Parameters.AddWithValue("@Password", hashedPassword);
 
                 try
                 {
